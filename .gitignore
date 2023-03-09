@@ -9,6 +9,8 @@
 *.toc
 *.pdf
 
+resume.synctex.gz
+
 !resume.pdf
 
 ## Intermediate documents:

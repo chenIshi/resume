@@ -1,0 +1,159 @@
+%-------------------------------------------------------------------------------
+% SECTION TITLE
+%-------------------------------------------------------------------------------
+\cvsection{Appendix}
+
+\vspace{-2mm}
+
+%-------------------------------------------------------------------------------
+% CONTENT
+%-------------------------------------------------------------------------------
+\begin{cventries}
+
+%---------------------------------------------------------
+  
+\cventry
+  {} % Degree
+  {Research intern: Cuju} % Institution
+  {} % Location
+  {https://github.com\linebreak/Cuju-ft/Cuju} % Date(s)
+  {
+    \vspace{-2mm}
+    \begin{cvitems} % Description(s) bullet points
+      \item {To provide fault tolerance for virtual machines, frequent snapshot provides state backup but at the cost of high
+      bandwidth cost between master and slave machines.}
+      \item {Reduce communication cost by several tricks, like fake ACK or dirty bit tracking for optimizations.}
+      \item {Require setup various physical/virtual network interfaces between physical/virtual machines.}
+      \item {Locate then troubleshoot integration failures from official integrity tests like qtest, iotest, kvm tests.}
+      \item {Further lead to my master researches on networking in Tsinghua University.}
+    \end{cvitems}
+  }
+
+  \vspace{-3mm}
+
+  \cventry
+    {} % Degree
+    {ATP: In-network Aggregation for Multi-tenant Learning.} % Institution
+    {} % Location
+    {https://www.usenix.org/conference\linebreak/nsdi21/presentation/lao} % Date(s)
+    {
+      \vspace{-2mm}
+      \begin{cvitems} % Description(s) bullet points
+        \item {The centralized communication pattern of distributed machine learning connecting a parameter server and several workers
+        comes with a natural scalability issue: traffic bottleneck towards the parameter server.}
+        \item {Resolve traffic congestion using in-network aggregation, implemented on programmable switches.}
+        \item {Performs better on training models requires heavy network communication like VGG.}
+        \item {Achieve reliable transmission by resend due to the extremely limited memory space on programmable switches.}
+        \item {Coherent design between servers and network switches.}
+      \end{cvitems}
+    }
+
+    \vspace{-3mm}
+  
+    \cventry
+      {} % Degree
+      {NQ/ATP: Architectural Support for Massive Aggregate Queries in Data Center Networks.} % Institution
+      {} % Location
+      {https://ieeexplore.ieee.org\linebreak/document/9812906/} % Date(s)
+      {
+        \vspace{-2mm}
+        \begin{cvitems} % Description(s) bullet points
+          \item {Extensive work from the previous work, but focus on applying in-network aggregation on a larger scale with a complicated
+          network topology.}
+          \item {Deploy different routing policies to reach out for each network monitors using a tree structure.}
+          \item {Propose the aggregation consistency issue when applying different routing policies.}
+        \end{cvitems}
+      }
+
+      \vspace{-3mm}
+  
+      \cventry
+        {} % Degree
+        {Gateway offloading with Hwawei} % Institution
+        {} % Location
+        {} % Date(s)
+        {
+          \vspace{-2mm}
+          \begin{cvitems} % Description(s) bullet points
+            \item {Coherent forwarding gateway with network switches and servers.}
+            \item {Alleviate forwarding pressure on the forwarding server by offloading elephant flows to network switches with high throughput.}
+            \item {Predicting the flow size on the forwarding server based on historical traffic record, and only offload the elephant flows still remains in the future.}
+          \end{cvitems}
+        }
+
+        \vspace{-3mm}
+  
+        \cventry
+          {} % Degree
+          {NFD2Rust: Interpret NFD with Rust} % Institution
+          {} % Location
+          {https://github.com\linebreak/chenIshi/NFD2Rust} % Date(s)
+          {
+            \vspace{-2mm}
+            \begin{cvitems} % Description(s) bullet points
+              \item {Parse a P4-like language, NFD, with Rust libraries and execute it with Rust.}
+              \item {Communicate with the inventor of NFD for the exact semantic.}
+              \item {Learn both NFD and Rust with the month.}
+            \end{cvitems}
+          }
+
+          \vspace{-3mm}
+  
+          \cventry
+            {} % Degree
+            {Why should we attend conferences oversea ?} % Institution
+            {} % Location
+            {https://coscup.org/2022\linebreak/en/session/ZLRSQQ} % Date(s)
+            {
+              \vspace{-2mm}
+              \begin{cvitems} % Description(s) bullet points
+                \item {Open-source community engagement experiences either as an attendance, organizer, or speaker.}
+                \item {Encouraging others to attend open-source conferences overseas.}
+              \end{cvitems}
+            }
+
+            \vspace{-3mm}
+  
+            \cventry
+              {} % Degree
+              {Formal Verification on Smart Contract} % Institution
+              {} % Location
+              {https://hkoscon.org/2019/topics/formal\linebreak-verification-smart-contract} % Date(s)
+              {
+                \vspace{-2mm}
+                \begin{cvitems} % Description(s) bullet points
+                  \item {Describe Ethereum smart contracts using K-framework to prevent unwanted side effects.}
+                  \item {Live demo on how to apply formal expressions to Ethereum contracts.}
+                \end{cvitems}
+              }
+
+              \cventry
+              {} % Degree
+              {Only Empty Lip Service ? Free Software Development in Taiwan} % Institution
+              {} % Location
+              {https://2018.fossasia.org\linebreak/event/tracks.html\#4366} % Date(s)
+              {
+                \vspace{-2mm}
+                \begin{cvitems} % Description(s) bullet points
+                  \item {Sharing experiences on promoting free software in Mongolia and Taiwan.}
+                \end{cvitems}
+              }
+
+              \vspace{-3mm}
+  
+              \cventry
+                {} % Degree
+                {Demystifying the Linux CPU Scheduler} % Institution
+                {} % Location
+                {https://github.com/sysprog21/linux\linebreak-kernel-scheduler-internals} % Date(s)
+                {
+                  \vspace{-2mm}
+                  \begin{cvitems} % Description(s) bullet points
+                    \item {A book in progress that focus on CPU scheduler within Linux Kernel, including some design variance and its
+                    corresponding implementations.}
+                    \item {Polish writing with formal phrases.}
+                  \end{cvitems}
+                }
+
+%---------------------------------------------------------
+\end{cventries}
