@@ -20,12 +20,11 @@
   {
     \vspace{-2mm}
     \begin{cvitems} % Description(s) bullet points
-      \item {To provide fault tolerance for virtual machines, frequent snapshot provides state backup but at the cost of high
-      bandwidth cost between master and slave machines.}
-      \item {Reduce communication cost by several tricks, like fake ACK or dirty bit tracking for optimizations.}
-      \item {Require setup various physical/virtual network interfaces between physical/virtual machines.}
-      \item {Locate then troubleshoot integration failures from official integrity tests like qtest, iotest, kvm tests.}
-      \item {Further lead to my master researches on networking in Tsinghua University.}
+      \item {Frequent VM state backup required in system migration led to high performance overhead and RTD(Round-Trip Delay) by about 40 times.}
+      \item {Cuju reduced the processing overhead of fault tolerance with optimizations like dirty state tracking, boosting performance using fake ACK to unlock traffic rate control within VMs, reducing latency by 97\%}
+      \item {Connected VMs with virtual bridge networks on tap interfaces and also with the host machine with NIC configuration.}
+      \item {Troubleshot integrity failures using official tests like \emph{qtest}, \emph{iotest}, and \emph{kvm tests}, where failures include functionality not implemented and invalid function call paths. }
+      \item {Led to further master study on networking at Tsinghua University.}
     \end{cvitems}
   }
 
@@ -39,12 +38,11 @@
     {
       \vspace{-2mm}
       \begin{cvitems} % Description(s) bullet points
-        \item {The centralized communication pattern of distributed machine learning connecting a parameter server and several workers
-        comes with a natural scalability issue: traffic bottleneck towards the parameter server.}
-        \item {Resolve traffic congestion using in-network aggregation, implemented on programmable switches.}
-        \item {Performs better on training models requires heavy network communication like VGG.}
-        \item {Achieve reliable transmission by resend due to the extremely limited memory space on programmable switches.}
-        \item {Coherent design between servers and network switches.}
+        \item {Incast traffic from workers to parameter servers led to scalability bottlenecks in distributed machine learning, impacting even more on communication-heavy models like VGGs.}
+        \item {With a coherent design between network switches and end servers, ATP accelerates the training process by up to 38\% - 66\%.}
+        \item {Built custom traffic rate and congestion control in a multi-tenant scenario with variable background traffic patterns.}
+        \item {Optimizations including converting floating-point operations to fixed-pointed integers due to the lack of P4 semantic support and packet segmentation due to restricted header parsing ability.}
+        \item {Integrated ATP with different tools like PyTorch, TensorFlow ,and MXNet.}
       \end{cvitems}
     }
 
@@ -58,10 +56,10 @@
       {
         \vspace{-2mm}
         \begin{cvitems} % Description(s) bullet points
-          \item {Extensive work from the previous work, but focus on applying in-network aggregation on a larger scale with a complicated
-          network topology.}
-          \item {Deploy different routing policies to reach out for each network monitors using a tree structure.}
-          \item {Propose the aggregation consistency issue when applying different routing policies.}
+          \item {Extensive research based on ATP, making in-network aggregation adapted to the nature of dynamic routing in scalable data-center networks.}
+          \item {Existing solutions with in-network computation failed under a non-deterministic routing path.}
+          \item {Binding the routing protocol along with the multi-layered aggregation, NQ/ATP resolved the congested traffic by 87.5\% and saves up at most 97.6\% of switch memory usage.}
+          \item {Based on a revised version of source routing, NQ/ATP constructs the necessary routing fields on-the-fly, where routing headers are shared by all logically-equivalent switches in dynamic routing.}
         \end{cvitems}
       }
 
@@ -69,15 +67,15 @@
   
       \cventry
         {} % Degree
-        {Gateway offloading with Hwawei} % Institution
+        {Collaborative project with Hwawei: Gateway offloading} % Institution
         {} % Location
         {} % Date(s)
         {
           \vspace{-2mm}
           \begin{cvitems} % Description(s) bullet points
-            \item {Coherent forwarding gateway with network switches and servers.}
-            \item {Alleviate forwarding pressure on the forwarding server by offloading elephant flows to network switches with high throughput.}
-            \item {Predicting the flow size on the forwarding server based on historical traffic record, and only offload the elephant flows still remains in the future.}
+            \item {Software gateways on commodity servers came with large capacity but low throughput. Thus, we offloaded the elephant flows to network switches with high throughputs.}
+            \item {Implemented a coherent gateway between network switches and servers, servers predicting flow patterns and located elephant flows with the top-K "predicted" traffic.}
+            \item {Proposed a distributed gateway design to achieve higher bandwidth, splitting the flow space evenly to each software gateway based on the hashed result, evaluated with its fairness index.}
           \end{cvitems}
         }
 
@@ -91,14 +89,42 @@
           {
             \vspace{-2mm}
             \begin{cvitems} % Description(s) bullet points
-              \item {Parse a P4-like language, NFD, with Rust libraries and execute it with Rust.}
-              \item {Communicate with the inventor of NFD for the exact semantic.}
-              \item {Learn both NFD and Rust with the month.}
+              \item {Interpret NFD, a Cpp-like language to describe network virtual functions, in addition to describing network terms like TCP SYN/ACK fields when parsing.}
+              \item {As the first project in my master;s degree, the Rust language, and network virtualization functions, I actively cooperate with my senior colleague, the inventor of NFD, to clarify the syntax and behavior of NFD.}
             \end{cvitems}
           }
 
           \vspace{-3mm}
-  
+
+          \cventry
+          {} % Degree
+          {Only Empty Lip Service ? Free Software Development in Taiwan} % Institution
+          {} % Location
+          {https://2018.fossasia.org\linebreak/event/tracks.html\#4366} % Date(s)
+          {
+            \vspace{-2mm}
+            \begin{cvitems} % Description(s) bullet points
+              \item {Based on previous promotion experiences on free software abroad including in Mongolia and as a teaching assistant for the course \emph{Free Software Development and Community Development} in Taiwan.}
+              \item {Discuss the worsening conditions after several years of promotions even among government departments.}
+            \end{cvitems}
+          }
+
+          \vspace{-3mm}
+
+          \cventry
+          {} % Degree
+          {Formal Verification on Smart Contract} % Institution
+          {} % Location
+          {https://hkoscon.org/2019/topics/formal\linebreak-verification-smart-contract} % Date(s)
+          {
+            \vspace{-2mm}
+            \begin{cvitems} % Description(s) bullet points
+              \item {Unlike programs in other fields, missing small security issues in smart contracts can easily lead to huge financial loss.}
+              \item {Applying formal verification on smart contracts for evaluation in full coverage, e.g., describe Ethereum smart contracts using K-framework to prevent unwanted side effects}
+              \item {Lead to my extended research during my master's degree on applying formal verification on network protocols.}
+            \end{cvitems}
+          }
+
           \cventry
             {} % Degree
             {Why should we attend conferences oversea ?} % Institution
@@ -107,39 +133,11 @@
             {
               \vspace{-2mm}
               \begin{cvitems} % Description(s) bullet points
-                \item {Open-source community engagement experiences either as an attendance, organizer, or speaker.}
-                \item {Encouraging others to attend open-source conferences overseas.}
+                \item {Based on previous experiences in conferences either as an attendance, organizer, or speaker, encourage others to step out and participate in conferences overseas.}
               \end{cvitems}
             }
 
             \vspace{-3mm}
-  
-            \cventry
-              {} % Degree
-              {Formal Verification on Smart Contract} % Institution
-              {} % Location
-              {https://hkoscon.org/2019/topics/formal\linebreak-verification-smart-contract} % Date(s)
-              {
-                \vspace{-2mm}
-                \begin{cvitems} % Description(s) bullet points
-                  \item {Describe Ethereum smart contracts using K-framework to prevent unwanted side effects.}
-                  \item {Live demo on how to apply formal expressions to Ethereum contracts.}
-                \end{cvitems}
-              }
-
-              \cventry
-              {} % Degree
-              {Only Empty Lip Service ? Free Software Development in Taiwan} % Institution
-              {} % Location
-              {https://2018.fossasia.org\linebreak/event/tracks.html\#4366} % Date(s)
-              {
-                \vspace{-2mm}
-                \begin{cvitems} % Description(s) bullet points
-                  \item {Sharing experiences on promoting free software in Mongolia and Taiwan.}
-                \end{cvitems}
-              }
-
-              \vspace{-3mm}
   
               \cventry
                 {} % Degree
@@ -149,9 +147,7 @@
                 {
                   \vspace{-2mm}
                   \begin{cvitems} % Description(s) bullet points
-                    \item {A book in progress that focus on CPU scheduler within Linux Kernel, including some design variance and its
-                    corresponding implementations.}
-                    \item {Polish writing with formal phrases.}
+                    \item {Elaborate on the Linux scheduler design iteration, each with hands-on experiments to identify the physical behaviors within the Linux kernel using profiling tools.}
                   \end{cvitems}
                 }
 

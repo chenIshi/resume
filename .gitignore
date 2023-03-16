@@ -11,7 +11,7 @@
 
 resume.synctex.gz
 
-!resume.pdf
+# !resume.pdf
 
 ## Intermediate documents:
 *.dvi
