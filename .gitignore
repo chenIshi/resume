@@ -8,6 +8,7 @@
 *.out
 *.toc
 *.pdf
+!resume.pdf
 
 resume.synctex.gz
 coverletter.synctex.gz

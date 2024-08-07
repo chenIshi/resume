@@ -1,12 +1,12 @@
-# Liu, An-Chi's Resume
+# Chen Yixi's Resume
 
-Download the resume: [Click Me](https://github.com/tigercosmos/resume/raw/master/resume.pdf)
+Download the resume: [Click Me](https://github.com/chenIshi/resume/raw/master/resume.pdf)
 
 ## Build
 
 ```
-make install
-make
+sudo apt-get install texlive-full
+docker run --rm --user $(id -u):$(id -g) -i -w "/doc" -v "$PWD":/doc thomasweise/texlive make
 ```
 
 ## Credit
